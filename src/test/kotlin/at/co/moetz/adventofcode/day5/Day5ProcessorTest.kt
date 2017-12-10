@@ -18,7 +18,7 @@ class Day5ProcessorTest {
     fun countStepsToEscapeExampleTestcase() {
         val input = listOf(0, 3, 0, 1, -3)
 
-        val captcha = processor.countStepsToEscape(input)
+        val result = processor.countStepsToEscape(input)
 
         assertEquals(
                 "- (0) 3  0  1  -3  - before we have taken any steps.\n" +
@@ -29,7 +29,7 @@ class Day5ProcessorTest {
                         "-  2  5  0  1  -2  - jump 4 steps forward, escaping the maze.\n" +
                         "In this example, the exit is reached in 5 steps.",
                 5,
-                captcha
+                result
         )
     }
 
@@ -37,12 +37,12 @@ class Day5ProcessorTest {
     fun countStepsToEscapeRealPuzzle() {
         val input = Day5Delegate.input
 
-        val captcha = processor.countStepsToEscape(input)
+        val result = processor.countStepsToEscape(input)
 
         assertEquals(
                 "Your puzzle answer was 364539.",
                 364539,
-                captcha
+                result
         )
     }
 
@@ -51,12 +51,12 @@ class Day5ProcessorTest {
     fun countStepsToEscapeWithStrangeJumpsExampleTestcase() {
         val input = listOf(0, 3, 0, 1, -3)
 
-        val captcha = processor.countStepsToEscapeWithStrangeJumps(input)
+        val result = processor.countStepsToEscapeWithStrangeJumps(input)
 
         assertEquals(
                 "Using this rule with the above example (0, 3, 0, 1, -3), the process now takes 10 steps, and the offset values after finding the exit are left as 2 3 2 3 -1.",
                 10,
-                captcha
+                result
         )
     }
 
@@ -64,12 +64,12 @@ class Day5ProcessorTest {
     fun countStepsToEscapeWithStrangeJumpsRealPuzzle() {
         val input = Day5Delegate.input
 
-        val captcha = processor.countStepsToEscapeWithStrangeJumps(input)
+        val result = processor.countStepsToEscapeWithStrangeJumps(input)
 
         assertEquals(
                 "Your puzzle answer was 27477714.",
                 27477714,
-                captcha
+                result
         )
     }
 

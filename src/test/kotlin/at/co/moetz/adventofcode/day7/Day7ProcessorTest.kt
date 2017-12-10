@@ -29,12 +29,12 @@ class Day7ProcessorTest {
                 "gyxo (61)",
                 "cntj (57)")
 
-        val captcha = processor.getNameOfBottomProgram(input)
+        val result = processor.getNameOfBottomProgram(input)
 
         assertEquals(
                 "In this example, tknk is at the bottom of the tower (the bottom program), and is holding up ugml, padx, and fwft. Those programs are, in turn, holding up other programs; in this example, none of those programs are holding up any other programs, and are all the tops of their own towers. (The actual tower balancing in front of you is much larger.)",
                 "tknk",
-                captcha
+                result
         )
     }
 
@@ -42,12 +42,12 @@ class Day7ProcessorTest {
     fun getNameOfBottomProgramRealPuzzle() {
         val input = Day7Delegate.input
 
-        val captcha = processor.getNameOfBottomProgram(input)
+        val result = processor.getNameOfBottomProgram(input)
 
         assertEquals(
                 "Your puzzle answer was azqje.",
                 "azqje",
-                captcha
+                result
         )
     }
 
@@ -69,7 +69,7 @@ class Day7ProcessorTest {
                 "gyxo (61)",
                 "cntj (57)")
 
-        val captcha = processor.calculateNeededWeightForUnbalancedTower(input)
+        val result = processor.calculateNeededWeightForUnbalancedTower(input)
 
         assertEquals(
                 "However, for tknk to be balanced, each of the programs standing on its disc and all programs above it must each match. This means that the following sums must all be the same:\n" +
@@ -79,7 +79,7 @@ class Day7ProcessorTest {
                         "fwft + (ktlj + cntj + xhth) = 72 + (57 + 57 + 57) = 243\n" +
                         "As you can see, tknk's disc is unbalanced: ugml's stack is heavier than the other two. Even though the nodes above ugml are balanced, ugml itself is too heavy: it needs to be 8 units lighter for its stack to weigh 243 and keep the towers balanced. If this change were made, its weight would be 60.",
                 60,
-                captcha
+                result
         )
     }
 
@@ -87,12 +87,12 @@ class Day7ProcessorTest {
     fun calculateNeededWeightForUnbalancedTowerRealPuzzle() {
         val input = Day7Delegate.input
 
-        val captcha = processor.calculateNeededWeightForUnbalancedTower(input)
+        val result = processor.calculateNeededWeightForUnbalancedTower(input)
 
         assertEquals(
                 "Your puzzle answer was 646.",
                 646,
-                captcha
+                result
         )
     }
 

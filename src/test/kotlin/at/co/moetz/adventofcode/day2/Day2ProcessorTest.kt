@@ -20,7 +20,7 @@ class Day2ProcessorTest {
                 "7\t5\t3\n" +
                 "2\t4\t6\t8"
 
-        val captcha = processor.calculateChecksum(input)
+        val result = processor.calculateChecksum(input)
 
         assertEquals(
                 "- The first row's largest and smallest values are 9 and 1, and their difference is 8.\n" +
@@ -28,7 +28,7 @@ class Day2ProcessorTest {
                         "- The third row's difference is 6.\n" +
                         "In this example, the spreadsheet's checksum would be 8 + 4 + 6 = 18.",
                 18,
-                captcha
+                result
         )
     }
 
@@ -51,12 +51,12 @@ class Day2ProcessorTest {
                 "378\t171\t155\t1100\t184\t937\t792\t1436\t1734\t179\t1611\t1349\t647\t1778\t1723\t1709\n" +
                 "4463\t4757\t201\t186\t3812\t2413\t2085\t4685\t5294\t5755\t2898\t200\t5536\t5226\t1028\t180"
 
-        val captcha = processor.calculateChecksum(input)
+        val result = processor.calculateChecksum(input)
 
         assertEquals(
                 "Your puzzle answer was 53460.",
                 53460,
-                captcha
+                result
         )
     }
 
@@ -67,7 +67,7 @@ class Day2ProcessorTest {
                 "9\t4\t7\t3\n" +
                 "3\t8\t6\t5"
 
-        val captcha = processor.calculateChecksumWithEvenlyDivisibleValues(input)
+        val result = processor.calculateChecksumWithEvenlyDivisibleValues(input)
 
         assertEquals(
                 "- In the first row, the only two numbers that evenly divide are 8 and 2; the result of this division is 4.\n" +
@@ -75,7 +75,7 @@ class Day2ProcessorTest {
                         "- In the third row, the result is 2.\n" +
                         "In this example, the sum of the results would be 4 + 3 + 2 = 9.",
                 9,
-                captcha
+                result
         )
     }
 
@@ -98,12 +98,12 @@ class Day2ProcessorTest {
                 "378\t171\t155\t1100\t184\t937\t792\t1436\t1734\t179\t1611\t1349\t647\t1778\t1723\t1709\n" +
                 "4463\t4757\t201\t186\t3812\t2413\t2085\t4685\t5294\t5755\t2898\t200\t5536\t5226\t1028\t180"
 
-        val captcha = processor.calculateChecksumWithEvenlyDivisibleValues(input)
+        val result = processor.calculateChecksumWithEvenlyDivisibleValues(input)
 
         assertEquals(
                 "Your puzzle answer was 282.",
                 282,
-                captcha
+                result
         )
     }
 

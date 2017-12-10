@@ -18,12 +18,12 @@ class Day3ProcessorTest {
     fun calculateManhattanDistanceExampleTestcase1() {
         val input = 1
 
-        val captcha = processor.calculateManhattanDistance(input)
+        val result = processor.calculateManhattanDistance(input)
 
         assertEquals(
                 "Data from square 1 is carried 0 steps, since it's at the access port.",
                 0,
-                captcha
+                result
         )
     }
 
@@ -31,12 +31,12 @@ class Day3ProcessorTest {
     fun calculateManhattanDistanceExampleTestcase2() {
         val input = 12
 
-        val captcha = processor.calculateManhattanDistance(input)
+        val result = processor.calculateManhattanDistance(input)
 
         assertEquals(
                 "Data from square 12 is carried 3 steps, such as: down, left, left.",
                 3,
-                captcha
+                result
         )
     }
 
@@ -44,12 +44,12 @@ class Day3ProcessorTest {
     fun calculateManhattanDistanceExampleTestcase3() {
         val input = 23
 
-        val captcha = processor.calculateManhattanDistance(input)
+        val result = processor.calculateManhattanDistance(input)
 
         assertEquals(
                 "Data from square 23 is carried only 2 steps: up twice.",
                 2,
-                captcha
+                result
         )
     }
 
@@ -57,12 +57,12 @@ class Day3ProcessorTest {
     fun calculateManhattanDistanceExampleTestcase4() {
         val input = 1024
 
-        val captcha = processor.calculateManhattanDistance(input)
+        val result = processor.calculateManhattanDistance(input)
 
         assertEquals(
                 "Data from square 1024 must be carried 31 steps.",
                 31,
-                captcha
+                result
         )
     }
 
@@ -70,12 +70,12 @@ class Day3ProcessorTest {
     fun calculateManhattanDistanceRealPuzzle() {
         val input = 277678
 
-        val captcha = processor.calculateManhattanDistance(input)
+        val result = processor.calculateManhattanDistance(input)
 
         assertEquals(
                 "Your puzzle answer was 475.",
                 475,
-                captcha
+                result
         )
     }
 
@@ -84,11 +84,11 @@ class Day3ProcessorTest {
     fun calculateFirstLargerValueStoredExampleTestcase1() {
         val input = 2
 
-        val captcha = processor.calculateFirstWrittenValueLargerThanInput(input)
+        val result = processor.calculateFirstWrittenValueLargerThanInput(input)
 
         assertEquals(
                 4,
-                captcha
+                result
         )
     }
 
@@ -96,11 +96,11 @@ class Day3ProcessorTest {
     fun calculateFirstLargerValueStoredExampleTestcase2() {
         val input = 304
 
-        val captcha = processor.calculateFirstWrittenValueLargerThanInput(input)
+        val result = processor.calculateFirstWrittenValueLargerThanInput(input)
 
         assertEquals(
                 330,
-                captcha
+                result
         )
     }
 
@@ -108,11 +108,11 @@ class Day3ProcessorTest {
     fun calculateFirstLargerValueStoredExampleTestcase3() {
         val input = 800
 
-        val captcha = processor.calculateFirstWrittenValueLargerThanInput(input)
+        val result = processor.calculateFirstWrittenValueLargerThanInput(input)
 
         assertEquals(
                 806,
-                captcha
+                result
         )
     }
 
@@ -120,12 +120,12 @@ class Day3ProcessorTest {
     fun calculateFirstLargerValueStoredRealPuzzle() {
         val input = 277678
 
-        val captcha = processor.calculateFirstWrittenValueLargerThanInput(input)
+        val result = processor.calculateFirstWrittenValueLargerThanInput(input)
 
         assertEquals(
                 "Your puzzle answer was 279138.",
                 279138,
-                captcha
+                result
         )
     }
 
