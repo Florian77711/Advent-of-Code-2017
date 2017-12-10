@@ -6,6 +6,9 @@ import at.co.moetz.adventofcode.day4.Day4Delegate
 import at.co.moetz.adventofcode.day5.Day5Delegate
 import at.co.moetz.adventofcode.day6.Day6Delegate
 import at.co.moetz.adventofcode.day7.Day7Delegate
+import at.co.moetz.adventofcode.day8.Day8Delegate
+import java.time.Duration
+import java.time.LocalDateTime
 
 
 fun main(args: Array<String>) {
@@ -15,7 +18,7 @@ fun main(args: Array<String>) {
 
 class DayDelegateManager {
 
-    val lastDay: Int = 7
+    val lastDay: Int = 8
 
     private val delegates: MutableMap<Int, DayDelegate> = mutableMapOf()
 
@@ -28,6 +31,7 @@ class DayDelegateManager {
         add(Day5Delegate())
         add(Day6Delegate())
         add(Day7Delegate())
+        add(Day8Delegate())
     }
 
     private fun add(delegate: DayDelegate) {
@@ -35,11 +39,16 @@ class DayDelegateManager {
     }
 
     fun run() {
+        val start = LocalDateTime.now()
         (1..lastDay)
                 .map { delegates[it]!! }
                 .forEach {
                     wrapDayWithConsoleOutput(it.title, it::part1, it::part2)
                 }
+        val end = LocalDateTime.now()
+
+        val duration = Duration.between(start, end)
+        System.out.println("Duration: " + duration.toMillis() + " ms")
     }
 
 
