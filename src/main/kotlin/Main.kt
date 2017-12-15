@@ -1,5 +1,6 @@
 import at.co.moetz.adventofcode.DayDelegate
 import at.co.moetz.adventofcode.day1.Day1Delegate
+import at.co.moetz.adventofcode.day10.Day10Delegate
 import at.co.moetz.adventofcode.day2.Day2Delegate
 import at.co.moetz.adventofcode.day3.Day3Delegate
 import at.co.moetz.adventofcode.day4.Day4Delegate
@@ -19,7 +20,7 @@ fun main(args: Array<String>) {
 
 class DayDelegateManager {
 
-    val lastDay: Int = 9
+    val lastDay: Int = 10
 
     private val delegates: MutableMap<Int, DayDelegate> = mutableMapOf()
 
@@ -34,6 +35,7 @@ class DayDelegateManager {
         add(Day7Delegate())
         add(Day8Delegate())
         add(Day9Delegate())
+        add(Day10Delegate())
     }
 
     private fun add(delegate: DayDelegate) {
