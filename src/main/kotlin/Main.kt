@@ -7,6 +7,7 @@ import at.co.moetz.adventofcode.day5.Day5Delegate
 import at.co.moetz.adventofcode.day6.Day6Delegate
 import at.co.moetz.adventofcode.day7.Day7Delegate
 import at.co.moetz.adventofcode.day8.Day8Delegate
+import at.co.moetz.adventofcode.day9.Day9Delegate
 import java.time.Duration
 import java.time.LocalDateTime
 
@@ -18,7 +19,7 @@ fun main(args: Array<String>) {
 
 class DayDelegateManager {
 
-    val lastDay: Int = 8
+    val lastDay: Int = 9
 
     private val delegates: MutableMap<Int, DayDelegate> = mutableMapOf()
 
@@ -32,6 +33,7 @@ class DayDelegateManager {
         add(Day6Delegate())
         add(Day7Delegate())
         add(Day8Delegate())
+        add(Day9Delegate())
     }
 
     private fun add(delegate: DayDelegate) {
